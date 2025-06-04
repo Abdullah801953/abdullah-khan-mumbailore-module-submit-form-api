@@ -18,7 +18,6 @@ app.post("/api/submit-lore", (req, res) => {
     if (!name || !email || !title || !body) {
       return res.status(400).json({ success: false, message: "Missing required fields" });
     }
-
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error("Error in /api/submit-lore:", error);
