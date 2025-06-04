@@ -19,7 +19,7 @@ app.post("/api/submit-lore", (req, res) => {
       return res.status(400).json({ success: false, message: "Missing required fields" });
     }
 
-    return res.status(200).json({ success: true,message: "Lore submitted successfully", data: { name, email, title, body } });
+    return res.status(200).json({ success: true });
   } catch (error) {
     console.error("Error in /api/submit-lore:", error);
     return res.status(500).json({ success: false, message: "Server error" });
